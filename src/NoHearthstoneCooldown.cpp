@@ -13,7 +13,7 @@ class NoHearthstoneCooldown : public PlayerScript, public WorldScript
 public:
     NoHearthstoneCooldown(): PlayerScript("NoHearthstoneCooldown"), WorldScript("NoHearthstoneCooldown") {}
 
-    bool OnBeforeTeleport(Player* player, uint32 /*mapid*/, float /*x*/, float /*y*/, float /*z*/, float /*orientation*/, uint32 /*options*/, Unit* /*target*/) override
+    bool OnBeforeTeleport(Player* player, uint32 /*mapid*/, float /*x*/, float /*y*/, float /*z*/, float /*orientation*/, uint32 /*options*/, Unit* /*target*/) //override
     {
         ClearHearthstoneCooldown(player);
         return true; 
