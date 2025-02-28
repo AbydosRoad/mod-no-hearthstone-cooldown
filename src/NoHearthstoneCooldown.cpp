@@ -19,7 +19,7 @@ public:
         return true; 
     }
 
-    void OnLogin(Player* player) override
+    void OnLogin(Player* player) //override
     {
         if (sConfigMgr->GetOption<bool>("NoHearthstoneCooldown.Announce", true))
         {
@@ -28,7 +28,7 @@ public:
         ClearHearthstoneCooldown(player);
     }
 
-    void OnAfterConfigLoad(bool /*reload*/) override 
+    void OnAfterConfigLoad(bool /*reload*/) //override 
     { 
         m_bNHCModuleEnabled = sConfigMgr->GetOption<bool>("NoHearthstoneCooldown.Enable", true);
     }
